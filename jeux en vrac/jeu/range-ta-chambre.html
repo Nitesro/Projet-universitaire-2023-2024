@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Range ta chambre</title>
+	</head>
+	<body>
+		<img src="https://moodle.iutv.univ-paris13.fr/img/bjs2/chambre.jpg"/>
+		<script src="https://moodle.iutv.univ-paris13.fr/img/bjs2/bjs2-js-lib.js"></script>
+		<script>
+           	range_ta_chambre('Tom',1)
+                .then(()=>{return range_ta_chambre('Paul',1);})
+                .then(()=>{return range_ta_chambre('Jean',1);})
+
+                attendre(2000)
+                .then(()=>{console.log('ok1');return attendre(2000);})
+                .then(()=>{console.log('ok2');return attendre(2000);})
+                .then(()=>{console.log('ok3');return attendre(2000);})
+                .then(()=>{console.log('ok4');return attendre(2000);})
+  
+		</script>
+	</body>
+</html>
